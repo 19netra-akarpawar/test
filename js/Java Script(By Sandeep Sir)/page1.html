@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <p > Greatest number among is: <span id="x"></span></p>
+    	<script>
+    	var a = 7, b = 6, c = 6, d = 5;
+    	//var g =  (a > b) ? (a > c ? a : c) : (b > c ? b : c) ;
+    	var g =  (a > b) ? (a > c ? (a > d ? a : d) : (c > d ? c : d)) : 
+    	(b > c ? (b > d ? b : d) : (c > d ? c : d)) ;
+    	document.getElementById("x").innerHTML = g;
+        </script>
+    </body>
+</html>

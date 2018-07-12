@@ -1,0 +1,30 @@
+<html>
+<head>
+	<title>
+	</title>
+</head>
+<body>
+	<script>
+		var t=0;
+		var data=[42,37,9,6,3,10];
+        for(var i=0;i<data.length;i++){
+        
+         for(var j=0;j<data.length;j++){
+          
+          
+          if (data[j]>data[j+1]) {
+           t=data[j];
+           data[j]=data[j+1];
+           data[j+1]=t;
+        }
+
+      }
+         
+    }
+
+        console.log(data);
+	</script>
+
+
+</body>
+</html>

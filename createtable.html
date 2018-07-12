@@ -1,0 +1,83 @@
+<html>
+<head>
+<title> </title>
+</head>
+<body>
+
+<div id="mytable"> </div>
+<script>
+var myTable = document.getElementById("mytable");
+var table = document.createElement("table");
+table.style.border = "1px solid";
+table.style.width = "100%";
+
+for (i = 0; i < 5; i++){
+    var tr = document.createElement("tr");
+    tr.id = i;
+    if (tr.id%2 == 1){
+        tr.style.backgroundColor = "#dbeaf9";
+    }
+    
+    var head = ["Name", "Image", "Engine Capacity", "Fuel", "Gearboxes", "Wheel Drive", "Seating Capacity", "Price", "Gallery"];
+    var data1 = ["Dawn", "bgimg.jpg", "6598cc, 563bhp @ 5250RPM power", "Petrol", "8 Speed, Automatic", "Rear Wheel Drive", "4 Seater", "6.39 Cr", "More Images"];
+    var data2 = ["Ghost", "bgimg.jpg", "6592cc, 563bhp @ 5250RPM power", "Petrol", "8 Speed, Automatic", "Rear Wheel Drive", "5 Seater", "5.62 Cr", "More Images"];
+    var data3 = ["Phantom", "bgimg.jpg", "6749cc, 460bhp @ 5350RPM power", "Petrol", "6 Speed, Automatic", "Rear Wheel Drive", "4 Seater", "7.59 Cr", "More Images"];
+    var data4 = ["Wraith", "bgimg.jpg", "6592cc, 624bhp @ 5600RPM power", "Petrol", "8 Speed, Automatic", "All Wheel Drive", "5 Seater", "5.28 Cr", "More Images"];
+    
+    for (j = 0; j < head.length; j++){
+        if (tr.id == 0){
+            var th = document.createElement("th");
+            th.innerHTML = head[j];
+            tr.appendChild(th);
+            th.style.padding = "10px";
+            th.style.border = "1px solid";
+        }
+        else{
+            if(tr.id == 1){
+                var td = document.createElement("td");
+                if(j==1){
+                    td.innerHTML = "<img src='"+data1[j]+"'/>";
+                    
+                }else{
+                    td.innerHTML = data1[j];
+                }
+                tr.appendChild(td);
+            }
+            if(tr.id == 2){
+                var td = document.createElement("td");
+                if(j==1){
+                    td.innerHTML = "<img src='"+data2[j]+"'/>";
+                }else{
+                    td.innerHTML = data2[j];
+                }
+                tr.appendChild(td);
+            }
+            if(tr.id == 3){
+                var td = document.createElement("td");
+                if(j==1){
+                    td.innerHTML = "<img src='"+data3[j]+"'/>";
+                }else{
+                    td.innerHTML = data3[j];
+                }
+                tr.appendChild(td);
+            }
+            if(tr.id == 4){
+                var td = document.createElement("td");
+                if(j==1){
+                    td.innerHTML = "<img src='"+data4[j]+"'/>";
+                }else{
+                    td.innerHTML = data4[j];
+                }
+                tr.appendChild(td);
+            }
+            td.style.padding = "10px";
+            td.style.border = "1px solid";
+//            data1[1].append("<img src='../assets/images/dawn.jpg'/>");
+        }
+    }
+    table.appendChild(tr);
+}
+myTable.appendChild(table);
+</script>
+</body>
+</html>

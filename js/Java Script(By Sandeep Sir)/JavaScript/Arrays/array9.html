@@ -1,0 +1,16 @@
+<!--  Object-heandling-->
+<!DOCTYPE html>
+<html>
+    <body>
+    <p>Creating a JavaScript Object.</p>
+    <div id="data"></div>
+    <script>
+    var student = {id:"10", name:"sandeep", course:"Web Development"};
+    for(s in student){
+        var ele = document.createElement("p");
+        ele.innerHTML = "<b>" + student[s] + "</b>";
+        document.getElementById("data").appendChild(ele);
+      }
+    </script>
+</body>
+</html>

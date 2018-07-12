@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>
+   Onload Page event </title>
+<script>
+
+function pageload()
+{
+  alert('page load sucessfully');
+  //alert('page load unsucessfully');
+}
+
+ function imageload()
+ {
+   alert ('image load sucessfully');
+ }
+   </script>
+   
+</head>
+
+<body onload="pageload()">
+
+<p> this Page is loaded </p>
+
+<img src="bgimg.jpg" onload="imageload()">
+
+</body>
+</html>

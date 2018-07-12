@@ -1,0 +1,75 @@
+<html>
+<head>
+</head>
+<body>
+ <label> Quantity </label><br>
+ <input type="text" value="" id="Q">
+ <br>
+ <br>
+ <label> Converted By</label><br>
+ <select id="A">
+ 	<option value="mm to mtr">mm to cm </option>
+ 	<option value="mtr to cm">cm to m </option>
+    <option value="cm to km">m to km </option>
+
+    <option value="mg to grm">mg to g </option>
+ 	<option value="grm to kg">g to kg </option>
+    <option value="kg to tone">kg to tone </option>
+
+    <option value="INR to doller">INR to Doller </option>
+ 	<option value="doller to euro">doller to euro </option>
+    <option value="euro to pond">euro to pond </option>
+ </select><br>
+ <br>
+ <label> Result </label><br>
+ <input type="text" value="" id = "res">
+ <br>
+ <br> 
+ <button type="button" onClick='conversion()'>Convert it</button>
+ <br><br> 
+ <script>
+ 	function conversion()
+ 	{
+ 		var p =parseInt(document.getElementById("Q").value);
+ 		var hh =document.getElementById("A").value;
+ 		var z;
+ 		alert(hh);
+ 	switch(hh)
+ 	{
+ 		case "mm to mtr":z=p/10;
+ 		break;
+
+ 		case "mtr to cm":z=p/100;
+ 		break;
+ 		
+ 		case "cm to km":z=p/1000;
+ 		break;
+ 		
+ 		case "mg to grm":z=p/10;
+ 		break;
+ 		
+ 		case "grm to kg":z=p/100;
+ 		break;
+ 		
+ 		case "kg to tone":z=p/1000;
+ 		break;
+ 		
+ 		case "INR to doller":z=p/66;
+ 		break;
+ 		
+ 		case "doller to euro":z=p/0.83;
+ 		break;
+
+ 		case "euro to pound":z=p/0.87;
+ 		break;
+ 		
+ 		}
+ 		document.getElementById('res').value=z;
+ 	}
+
+ 	
+ </script>
+
+
+</body>
+</html>

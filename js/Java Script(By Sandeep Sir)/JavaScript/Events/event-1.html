@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <form action="#" onclick="myEvent()">
+      Enter name: <input type="text" id ="name" name="name">
+                    <input type="submit" value="Submit">
+    </form>
+    <script>
+        function myEvent() {
+            var name = document.getElementById('name').value;
+            alert('The user name is : '+ name);
+        }
+    </script>
+</body>
+</html>

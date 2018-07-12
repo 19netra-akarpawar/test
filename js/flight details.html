@@ -1,0 +1,71 @@
+<html>
+<head>
+	<style type="text/css">
+		table,tr,th,td
+		{
+			border:2px solid black;
+			border-collapse: collapse;
+		}
+	</style>
+</head>
+<body onload="show();">
+<table>
+	 <thead>
+	 	<tr>
+	 	<th>Flight </th>
+	 	<th>Timing </th>
+	 	<th>Departure Time </th>
+	 	<th>Arrival Time</th>
+	 	<th><button type="button" onclick="sortBYfare()">Fare</button></th>
+	    </tr>
+	 </thead>
+	 <tbody id="d"></tbody>
+</table>
+
+<script>
+	var data=[{"flight":"indigo","timing":"2hr","dtime":"6.30","Atime":"9.00","fare":"5000"},
+	{"flight":"airindia","timing":"3hr","dtime":"7.30","Atime":"10.00","fare":"3000"},
+	{"flight":"spiceget","timing":"2hr","dtime":"8.30","Atime":"11.00","fare":"4000"},
+	{"flight":"goindia","timing":"2hr","dtime":"9.30","Atime":"12.00","fare":"7000"},
+	{"flight":"vistara","timing":"2hr","dtime":"10.30","Atime":"1.00","fare":"6000"}]
+
+	function show()
+	{
+		const table =document.getElementById('d');
+		 for(index in data)
+		 {
+		 	let ind_data = data[index];
+		 	let tr =document.createElement("tr");
+		 	for(t in ind_data)
+		 	{
+		 		 let td =document.createElement("td");
+		 		 td.innerHTML =ind_data[t];
+		 		 tr.appendChild(td);
+		 	}
+		 	table.appendChild(tr);
+		 }
+	}
+
+	 function sortBYfare()
+	 {
+	 	var f = [];
+				for(var i=0;i < data.length; i++){
+					var plane = data[i];
+					f[i] = plane["fare"];
+				}
+				for(i = 0; i< f.length ; i++) { 
+					for(j = i+1; j< f.length ; j++) 
+					{
+						if (f[i] > f[j]){
+							temp = data[i];
+							data[i] = data[j];//sorting nd swaping array
+							data[j] = temp;
+						}
+				}
+			}
+		console.log(data);	
+		show();
+	 }
+	</script>
+</body>
+</html>

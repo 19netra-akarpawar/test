@@ -1,0 +1,79 @@
+<!-- AssociativeArray example -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <style>
+        button{
+            padding:10px;
+            margin:10px;
+            background-color:green;
+            font-size:18px;
+            border:none;
+        }
+        #ResultDiv{
+            border:2px solid red;
+            width:300px;
+            font-size:18px;
+        }
+    </style>
+</head>
+<body>
+	<button type="button" value= " Show Names " onclick="showData();"><b>Show Collection Array Data</b></button><hr>
+	<div id="ResultDiv"></div>
+
+    <script>
+          /*  var Product = {    "ProductID":101,
+                               "ProductName":"MacBook Air",
+                               "ProductPrice":125000.00,
+                               "ProductType":"Laptop"};
+*/
+
+			var Product1 = [];
+			Product1["ProductID"] = 101;
+			Product1["ProductName"] = "MacBook Air";
+			Product1["ProductPrice"] = 125000.00;
+			Product1["ProductType"] = "Laptop";
+
+            var Product2 = [];
+            Product2["ProductID"] = 101;
+            Product2["ProductName"] = "MacBook Air";
+            Product2["ProductPrice"] = 125000.00;
+            Product2["ProductType"] = "Laptop";
+
+            var Product3 = [];
+            Product3["ProductID"] = 101;
+            Product3["ProductName"] = "MacBook Air";
+            Product3["ProductPrice"] = 125000.00;
+            Product3["ProductType"] = "Laptop";
+
+            var Product4 = [];
+            Product4["ProductID"] = 101;
+            Product4["ProductName"] = "MacBook Air";
+            Product4["ProductPrice"] = 125000.00;
+            Product4["ProductType"] = "Laptop";
+
+            var ProductsInfo = [Product1, Product2, Product3, Product4];
+
+            function showData()
+            {
+            for (var x in ProductsInfo){
+                var pro = ProductsInfo[x];
+                //console.log(pro);
+                for(var y in pro){
+                    document.write(y + " : " + pro[y]+"<br>");
+                }
+            }
+        }
+			/*function showData() {
+                var ResultDiv = document.getElementById("ResultDiv");
+                for( t in Product){
+                    var newDiv = document.createElement("div");
+                    newDiv.innerHTML = t+ ": <b>" + Product[t] + "</b>";
+                    ResultDiv.appendChild(newDiv);
+                }
+                */
+	</script>
+</body>
+</html>

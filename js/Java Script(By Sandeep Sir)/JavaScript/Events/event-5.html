@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1 id="test" style="text-align:center;">Do you know "WHO I AM"</h1>
+    <script>
+        document.getElementById("test").onmouseover = function() {
+            mouseOver()
+        };
+        document.getElementById("test").onmouseout = function() {
+            mouseOut()
+        };
+
+        function mouseOver() {
+            document.getElementById("test").style.color = "red";
+            document.getElementById("test").innerHTML = "SANDEEP PAL"
+        }
+
+        function mouseOut() {
+            document.getElementById("test").style.color = "black";
+            document.getElementById("test").innerHTML = 'Do you know "WHO I AM"'
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!-- array data searching -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script>
+		function showData()
+		{
+      var search = document.getElementById('search').value;
+			var name = ["sandeep","dhanashree","pranati","reshma","sagar"];
+      var result = false;
+
+			for(i in name) {
+				if(name[i].toLowerCase() === search.toLowerCase()) {
+	        		result = true;
+							document.getElementById("rd").innerHTML="<b>" + search.toLowerCase()+' </b>is exists in array at index '+i;
+	            break;
+	      }
+			}
+      if(result==false)
+      {
+					document.getElementById("rd").innerHTML= "<b>" + search+' </b>is not exists in array';
+      }
+    }
+	</script>
+</head>
+<body>
+    <input type="text" id="search"/><br/><br>
+	  <button type="button" value= "Show Names" onclick="showData();">Search</button><br/><br>
+    <div style="border:4px solid red;"></div>
+    <div id="rd" style="font-size:20px;"></div>
+</body>
+</html>

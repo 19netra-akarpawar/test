@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<script>
+		// without IIFE
+		function getProduct() {
+		   return "MacBook-Pro";
+		}
+ 
+		function displayProductDetails(productName) {
+		   console.log("This is " + productName);
+		}
+		 
+		function addProductToCart(productName) {
+		   console.log(productName + " added to your shopping cart");
+		}
+		 
+		function makePayment(productName) {
+		   console.log("Making payment for " + productName);
+		}
+		  
+		var productName = getProduct();
+		displayProductDetails(productName);
+		addProductToCart(productName);
+		productName = 'Samsung';
+		makePayment(productName);
+	</script>
+
+	<script>
+		// with IIFE
+		(function() {
+		    function getPhone() {
+		       return "iPhone7";
+		    }
+		    function displayProductDetails(productName) {
+		       console.log("This is " + productName);
+		    }
+		    function addProductToCart(productName) {
+		       console.log(productName + " added to your shopping cart");
+		    }
+		    function makePayment(productName) {
+		       console.log("Making payment for " + productName);
+		    }
+		    var productName = getPhone();
+		    displayProductDetails(productName);
+		    addProductToCart(productName);
+		    makePayment(productName);
+		}());
+		productName = 'samsung';
+	</script>
+</body>
+</html>

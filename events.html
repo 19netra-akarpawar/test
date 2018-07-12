@@ -1,0 +1,35 @@
+<html>
+<head>
+ <title> events </title>
+ <script>
+ 
+ function my_click()  
+ {
+    alert('this wil show on click event');
+	//doument.getElementByID("demo").innerHTML ;
+	
+ }
+ 
+ function doubleclick()
+ 
+ {
+     //alert(" this will show you current date");
+	 document.getElementById('demo').innerHTML = Date(); 
+  }
+ 
+ </script>
+ </head>
+ <body>
+ 
+ <p id="demo"> This is onclick event </p>
+ 
+  
+  
+  
+ <button type="button" onclick="my_click()"> click me </button>
+ 
+ <button type="button" ondblclick="doubleclick()"> Click </button>
+ 
+ 
+ </body>
+ </html>

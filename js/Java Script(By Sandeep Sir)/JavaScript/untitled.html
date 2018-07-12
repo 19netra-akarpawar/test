@@ -1,0 +1,32 @@
+<!--
+2. Write a JavaScript program to check from two given 
+integers, if one is positive and one is negative.
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	A : <input type="text" name="" id="x"><br>
+	B : <input type="text" name="" id="y"><br>
+	<button type="button" onclick="fun()">Find Result</button><br>
+
+	Result is : <span id="xx"></span> 
+	<script >
+		function fun() {
+			var x = parseInt(document.getElementById('x').value);
+			var y = parseInt(document.getElementById('y').value);
+			if(x + y == 50)
+				document.getElementById("xx").innerHTML = 'true';
+			else if (x == 50 || y == 50)
+				document.getElementById("xx").innerHTML = 'true';
+			else
+				document.getElementById("xx").innerHTML = 'false';
+			
+
+		}
+	</script>
+</body>
+</html>

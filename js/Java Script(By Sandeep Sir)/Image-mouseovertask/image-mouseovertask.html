@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		#a{
+			border:1px solid black;
+			width:609px;
+		}
+		img:hover{
+			border:3px solid black;
+			width: 220px;
+			height: 220px;
+		}
+		img{
+			width: 200px;
+			height: 200px;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<img src="image1.jpeg" alt="flower" onmouseover="show1()" onmouseleave="hide()">
+		<img src="image1.jpeg" alt="flower" onmouseover="show2()" onmouseleave="hide()">
+		<img src="image1.jpeg" alt="flower" onmouseover="show3()" onmouseleave="hide()">
+	</div>
+
+	<div id="a"></div>
+	
+	<script type="text/javascript">
+		function show1(){
+			var div = document.getElementById("a");
+			var p = document.createElement("p");
+			div.appendChild(p);
+			p.innerHTML = "first image"
+		}
+		function show2(){
+			var div = document.getElementById("a");
+			var p = document.createElement("p");
+			div.appendChild(p);
+			p.innerHTML = "second image"
+		}
+		function show3(){
+			var div = document.getElementById("a");
+			var p = document.createElement("p");
+			div.appendChild(p);
+			p.innerHTML = "third image"
+		}
+		function hide(){
+			var div = document.getElementById("a");
+			div.removeChild(div.childNodes[0]);
+		}
+		
+	</script>
+</body>
+</html>

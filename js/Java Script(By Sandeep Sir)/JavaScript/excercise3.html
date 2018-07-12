@@ -1,0 +1,48 @@
+<!--
+3. Write a JavaScript program to find the area of a 
+triangle where lengths of the three of its sides are 
+5, 6, 7.
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	Enter base : <input type="text" name="" id="x"><br>
+	Enter height : <input type="text" name="" id="y"><br>
+	<button type="button" onclick="fun()">Find Result</button><br>
+
+	The area of triangle is : <span id="xx"></span> 
+	<hr>
+
+	Enter one side : <input type="text" name="" id="x1"><br>
+	Enter second side : <input type="text" name="" id="y1"><br>
+	Enter third side : <input type="text" name="" id="z1"><br>
+	<button type="button" onclick="fun2()">Find Result</button><br>
+
+	The area of triangle is : <span id="xxx"></span> 
+	<script >
+		function fun() {
+			var x = parseInt(document.getElementById('x').value);
+			var y = parseInt(document.getElementById('y').value);
+			
+			var area = 0.5 * x * y ;
+			document.getElementById("xx").innerHTML = area;
+		}
+
+		function fun2() {
+			var x = parseInt(document.getElementById('x1').value);
+			var y = parseInt(document.getElementById('y1').value);
+			var z = parseInt(document.getElementById('z1').value);
+			
+
+			var s = 0.5 * (x+y+z);
+
+			var area = Math.sqrt(s * (s-x) * (s-y) * (s-z)) ;
+			document.getElementById("xxx").innerHTML = area;
+		}
+	</script>
+</body>
+</html>

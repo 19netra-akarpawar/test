@@ -1,0 +1,22 @@
+[
+	{
+		"id": 12,
+		"name": "sandeep",
+		"salary": 450
+	},
+	{
+		"id": 45,
+		"name": "mohit",
+		"salary": 950
+	},
+	{
+		"id": 34,
+		"name": "tom",
+		"salary": 500
+	},
+	{
+		"id": 23,
+		"name": "aamir",
+		"salary": 700
+	}
+]

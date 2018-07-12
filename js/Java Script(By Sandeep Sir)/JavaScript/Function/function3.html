@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<button type="button" onclick="add(10,20);">Add</button>
+	<button type="button" onclick="sub(10,20);">Sub</button>
+	<button type="button" onclick="mult(10,20);">mult</button>
+	<button type="button" onclick="div(10,20);">div</button>
+	<br>Result : <div id="x"></div>
+	<script>
+		var x = document.getElementById('x');
+		function add(a,b)
+		{
+			x.innerHTML = (a+b);
+		}
+		function sub(a,b)
+		{
+			x.innerHTML = (a-b);
+		}
+		function mult(a,b)
+		{
+			x.innerHTML = (a*b);
+		}
+		function div(a,b)
+		{
+			x.innerHTML = (a/b);
+		}
+	</script>
+</body>
+</html>

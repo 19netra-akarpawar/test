@@ -1,0 +1,43 @@
+<html>
+    <body>
+                <label>Enter Number 1</label>
+                <input type='text' id="num1" /><br/><br/>
+                <label>Enter Number 2</label>
+                <input type='text' id="num2" /><br/><br/>
+                <input type="button" onmouseover="mathcal('getsum')" value="Sum"/>
+                <input type="button" onmouseover="mathcal('getsub')" value="Subtraction"/>
+                <input type="button" onmouseover="mathcal('getmul')" value="Multiplication"/>
+                <input type="button" onmouseover="mathcal('getdiv')" value="Division"/>
+        
+    </body>
+    <script>
+    
+    function mathcal(m)
+    {
+        
+        var num1=document.getElementById('num1').value;
+        var num2=document.getElementById('num2').value;
+        
+        
+        if(m == 'getsum')
+        {    
+            var s=parseInt(num1)+parseInt(num2);
+            
+        }
+        if(m=='getsub')
+        {    
+            var s=parseInt(num1)-parseInt(num2);
+        }
+        if(m=='getmul')
+        {    
+            var s=parseInt(num1)*parseInt(num2);
+        }
+        if(m=='getdiv')
+        {    
+            var s=parseInt(num1)/parseInt(num2);
+        }
+        alert(s);
+    }
+
+</script>
+</html>

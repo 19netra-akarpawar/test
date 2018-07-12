@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <p>Select a new car from the list.</p>
+
+    <select id="mySelect" onchange="test()">
+          <option value="Java">Java
+          <option value="HTML5">HTML5
+          <option value="CSS3">CSS3
+          <option value="Bootstrap">Bootstrap
+    </select>
+
+    <p>Select anyone from list :</p>
+
+    <h2>You selected: <span id="d" style="color:blue">Java</span></h2>
+
+    <script>
+    function test() {
+        var x = document.getElementById("mySelect").value;
+        document.getElementById("d").innerHTML =  x;
+    }
+    </script>
+
+</body>
+</html>
+

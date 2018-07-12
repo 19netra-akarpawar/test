@@ -1,0 +1,53 @@
+<!DOCTYPE html>  
+<html><head>  
+
+</head>  
+<body onload="document.registration.username.focus();">  
+	<h1>Registration Form</h1>  
+	<form name='registration' onSubmit="return formValidation();"> 
+	  
+	<label for="username">Name:</label>
+	<input type="text" name="username" size="50" /><br><br>
+	<input type="submit" name="submit" value="Submit" />
+	</form>
+	<script>
+	function formValidation()  
+	{  
+	var uname = document.registration.username;  
+		return username_validation(uname);
+	}
+	function username_validation(uname)  
+	{   
+	
+
+
+	// matching all letters i.e [A-Z] & [a-z]
+		// regular expression
+		var letters = /^[A-Za-z]+$/;  
+		if(uname.value.match(letters))  
+		{  
+			alert("User name is : "+ uname.value);
+			return true;  
+		}  
+	
+
+
+
+
+
+
+
+
+
+
+		else  
+		{  
+			alert('Username must have alphabet characters only');
+			uname.focus();  
+			return false;  
+		}  
+	}    
+
+	</script> 
+</body>  
+</html>  

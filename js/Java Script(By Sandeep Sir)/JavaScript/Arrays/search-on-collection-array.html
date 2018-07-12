@@ -1,0 +1,80 @@
+<!-- AssociativeArray example -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <style>
+        button{
+            padding:10px;
+            margin:10px;
+            background-color:green;
+            font-size:18px;
+            border:none;
+        }
+        #ResultDiv{
+            border:2px solid red;
+            width:300px;
+            font-size:18px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" name="product" id="pro">
+	<button type="button" value= " Show Names " onclick="showData();"><b>Show Associtaive Array Data</b></button>
+    <hr>
+	<div id="ResultDiv"></div>
+
+    <script>
+        var Product1 = [];
+		Product1["ProductID"] = 101;
+		Product1["ProductName"] = "MacBook Air";
+		Product1["ProductPrice"] = 125000;
+		Product1["ProductType"] = "Laptop";
+
+        var Product2 = [];
+        Product2["ProductID"] = 102;
+        Product2["ProductName"] = "Samsung Galaxy";
+        Product2["ProductPrice"] = 25000;
+        Product2["ProductType"] = "Mobile";
+
+        var Product3 = [];
+        Product3["ProductID"] = 103;
+        Product3["ProductName"] = "Sony Bravia";
+        Product3["ProductPrice"] = 100000;
+        Product3["ProductType"] = "LED";
+
+        var Product4 = [];
+        Product4["ProductID"] = 104;
+        Product4["ProductName"] = "Micromax canvas";
+        Product4["ProductPrice"] = 15000;
+        Product4["ProductType"] = "Mobile";
+
+        var ProductsInfo = [Product1, Product2, Product3, Product4]
+        function showData()
+        {
+        var search = parseInt(document.getElementById('pro').value);
+        var t = 0;
+
+        var res = document.getElementById('ResultDiv');
+        for (var x in ProductsInfo){
+            var product = ProductsInfo[x];
+            if(product['ProductID'] == search){
+                for(var y in product)
+                {
+                    var p = document.createElement('p');
+                    p.innerHTML = y + " : " + product[y];
+                    res.appendChild(p);
+                }
+                t = 1;
+            }
+            if (t == 1)
+                break;
+        }
+        if(t==0){
+            res.innerHTML = 'sorry product is not available';
+        }
+        }
+	</script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!-- AssociativeArray example -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <style>
+        button{
+            padding:10px;
+            margin:10px;
+            background-color:green;
+            font-size:18px;
+            border:none;
+        }
+        #ResultDiv{
+            border:2px solid red;
+            width:300px;
+            font-size:18px;
+        }
+        table{
+            width:50%;
+        }
+        table,tr,td{
+            border-bottom:1px solid black;
+            
+        }
+        td{
+            padding: 5px;
+            font-size: 20px;
+            margin:5px;
+            border-collapse: collapse;
+        }
+        tr:nth-child(odd) {
+            background: #ddd;
+        }
+
+        tr:nth-child(even) {
+            background: #888;
+        }
+        img{
+            width:25%;
+            height: 25%;
+        }
+    </style>
+</head>
+<body>
+    <button type="button" value= " Show Names " onclick="showData();"><b>Show Table</b></button>
+    <hr>
+	<table id="r"></table>
+
+    <script>
+        var Product1 = [];
+		Product1["ProductID"] = 101;
+		Product1["ProductName"] = "MacBook Air";
+		Product1["ProductPrice"] = 125000;
+		Product1["ProductType"] = "Laptop";
+        Product1["ProductImage"] = "smashicons.jpg";
+
+        var Product2 = [];
+        Product2["ProductID"] = 102;
+        Product2["ProductName"] = "Samsung Galaxy";
+        Product2["ProductPrice"] = 25000;
+        Product2["ProductType"] = "Mobile";
+        Product2["ProductImage"] = "smashicons.jpg";
+
+        var Product3 = [];
+        Product3["ProductID"] = 103;
+        Product3["ProductName"] = "Sony Bravia";
+        Product3["ProductPrice"] = 100000;
+        Product3["ProductType"] = "LED";
+        Product3["ProductImage"] = "smashicons.jpg";
+        
+        var Product4 = [];
+        Product4["ProductID"] = 104;
+        Product4["ProductName"] = "Micromax canvas";
+        Product4["ProductPrice"] = 15000;
+        Product4["ProductType"] = "Mobile";
+        Product4["ProductImage"] = "smashicons.jpg";
+
+        var ProductsInfo = [Product1, Product2, Product3, Product4]
+        function showData()
+        {
+        var res = document.getElementById('r');
+        for (var x in ProductsInfo){
+            var product = ProductsInfo[x];
+            var tr = document.createElement('tr');
+            for(var y in product)
+            {
+                if(y == 'ProductImage'){
+                    var td = document.createElement('td');
+                    var img = document.createElement('img');
+                    img.src=product[y];
+                    td.appendChild(img);
+                }
+                else{
+                    var td = document.createElement('td');
+                    td.innerHTML = product[y];
+                }
+                tr.appendChild(td);
+                
+                
+            }
+            res.appendChild(tr);
+        }
+        }
+	</script>
+</body>
+</html>

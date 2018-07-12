@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<!-- onkeyup="disp()" 
+		onkeypress="disp()"
+		onkeydown="disp()"
+		onchange="disp()"
+		onmouseover="disp()"
+		onclick="disp()"
+	-->
+	<input type="text" id="x" onclick="disp()" >
+	<h1 id = 'y'></h1>
+
+	<script type="text/javascript">
+		function disp() {
+		document.getElementById('y').innerHTML =  document.getElementById('x').value;
+	}
+	</script>
+</body>
+</html>

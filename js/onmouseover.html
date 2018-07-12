@@ -1,0 +1,73 @@
+<html>
+<head>
+<style>
+body{
+	 background-color:gray;
+}
+ .img1
+ {
+ 	border:6px groove green;
+ 	width:300px;
+ 	height:200px;
+ 	margin:10px;
+
+ }
+ .img2
+ {
+ 	border:6px groove green;
+ 	width:300px;
+ 	height:200px;
+ 	margin:10px;
+ 	
+ }
+ .img3
+ {
+ 	border:6px groove green;
+ 	width:300px;
+ 	height:200px;
+ 	margin:10px;
+ 	
+ }
+</style>
+</head>
+<body>
+<div id="img1">
+ <img src="lotus.jpg" class="img1" onmouseover="show1()" onmouseleave="hide()">
+ <img src="tupil.jpg" class="img2" onmouseover="show2()" onmouseleave="hide()">
+ <img src="jasmine.jpg" class="img3"onmouseover="show3()" onmouseleave="hide()">
+</div>
+<div id="a"></div>
+ <script>
+ 	function show1()
+ 	{
+ 	  var div=document.getElementById("a");
+      var p=document.createElement("p");
+        div.appendChild(p);
+        p.innerHTML=("this is lotus flower");
+ 	}
+
+ 	function show2()
+ 	{
+ 	  var div=document.getElementById("a");
+      var p=document.createElement("p");//create element
+        div.appendChild(p);//add a child
+        p.innerHTML=("this is tupil flower");
+ 	}
+
+ 	function show3()
+ 	{
+ 	  var div=document.getElementById("a");
+      var p=document.createElement("p");
+        div.appendChild(p);
+        p.innerHTML=("this is jasmine flower");
+ 	}
+
+ 	function hide()
+ 	{
+ 		var div= document.getElementById("a");
+ 		div.removeChild(div.childNodes[0]);//remove the data from the pages
+ 	}
+ 	
+ </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+<head>
+<title> prototype</title>
+</head>
+<body>
+	<p id="demo"></p>
+	<script>
+		function Person(first,last,age)
+		{
+			this.firstName = first;
+			this.lastName = last;
+			this.age = age;
+		}
+
+		Person.prototype.fullname= function()
+		{
+			return this.firstName + " " +this.lastName
+		};
+
+   var person1 = new Person("ABC", "PQR",24);
+    var person2 = new Person("XYC", "FBR",26);
+
+    document.getElementById("demo").innerHTML = "Person1 Full Name is " + person1.fullname()+ "<br>" + "Person2 Full Name is " + person2.fullname();
+</script>
+</body>
+</html>

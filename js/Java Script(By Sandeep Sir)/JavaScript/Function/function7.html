@@ -1,0 +1,34 @@
+<!-- pallendrom number -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	Enter number <input type="text" id="b"><br>
+	<button type="button" onclick="prime();">Get Prime Info</button>
+	<br>Number is : <span id="x"></span>
+	<script>
+		var x = document.getElementById('x');
+		function prime()
+		{
+			var d = "";
+			var bb = document.getElementById('b').value.split("");
+			for( var i = 0 ; i < bb.length ; i++){
+			 	d = bb[i] + d;
+			 }
+
+			if(d.localeCompare(document.getElementById('b').value) == 0){
+				x.innerHTML = "pallendrom number";
+				x.style.color = "green";
+			}
+			else{
+				x.innerHTML = "Not pallendrom number";
+				x.style.color = "red";
+			}
+
+		}
+		
+	</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+	div{
+		background-color: black;
+		width: 60%;
+		padding-top:10px;
+		padding-left: 15px;
+		margin:30px;
+
+	}
+		.x{
+			color:blue; 
+		}
+		.y{
+			color:green;
+		}
+		.z{
+			color:red;
+		}
+
+	</style>
+</head>
+<body>
+	<div>
+	<pre>
+		<code >
+<span class="x">function</span> <span  class="y">inchestometers</span>(inches)  
+   {  
+   <span class="x">if</span> (inches < 0)  
+      <span  class="x">return</span> -1;  
+   <span  class="x">else  </span>
+      {  
+      <span  class="x">var</span> meters = inches / 39.37;  
+      <span  class="x">return</span> meters;  
+      }  
+   }  
+
+<span  class="x">var</span> inches = 12;  
+<span  class="x">var</span> meters = inchestometers(inches);  
+<span  class="x">document</span>.write(<span  class="z">"the value in meters is " </span>+ meters);  
+</code>
+</pre>
+</div>
+</body>
+</html>

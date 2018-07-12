@@ -1,0 +1,40 @@
+<!DOCTYPE html>  
+<html><head>  
+
+</head>  
+<body onload="document.registration.passid.focus();">  
+	<h1>Registration Form</h1>  
+	<form name='registration' onSubmit="return formValidation();"> 
+	<label for="passid">Password:</label>
+	<input type="password" name="passid" size="12" style="width:40%"/><br><br>
+  
+	<input type="submit" name="submit" value="Submit" />
+	</form>
+	<script>
+	function formValidation()  
+	{  
+		var passid = document.registration.passid;  
+		return passid_validation(passid,7,12);
+	}
+	function passid_validation(passid,mx,my)  
+	{  
+		var passid_len = passid.value.length;  
+		var letters = /^[A-Za-z0-9@#$]+$/;  
+		if(passid.value.match(letters))  
+		{  
+			alert("User pass is : "+ passid.value);
+			return true;  
+		}  
+		
+		/*if (passid_len == 0 || passid_len >= my || passid_len < mx)  
+		{  
+			alert("Password should not be empty / length be between "+mx+" to "+my);  
+			passid.focus();  
+			return false;  
+		}*/
+		return true;
+	}  
+
+	</script> 
+</body>  
+</html>  

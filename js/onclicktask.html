@@ -1,0 +1,79 @@
+<html>
+<head>
+</head>
+<body>
+ <label>A:</label>
+ <input type="text" id="A">
+ <br><br>
+ 
+  <label>B:</label>
+ <input type="text" id="B">
+ <br><br>
+
+ <label>Result: </label>
+ <input type="text" id="result">
+ <br>
+ <br><br>
+
+ <button type="button" onClick="add()">ADD </button>
+ <br><br>
+
+ <button type="button" onClick="sub()">SUB </button>
+ <br><br>
+ 
+ <button type="button" onClick="mul()"> MULTI</button><br>
+ <br>
+ 
+ <button type="button" onClick="div()">DIV</button><br>
+ <br>
+ <script>
+ 	function add()
+ 	{
+ 		var x=document.getElementById("A").value;
+ 		var y=document.getElementById("B").value;
+        var z =parseInt(x) +parseInt(y);
+        document.getElementById("result").value =z ; 
+
+     }
+
+     function sub()
+ 	{
+ 		var x=document.getElementById("A").value;
+ 		var y=document.getElementById("B").value;
+        var z =parseInt(x) - parseInt(y);
+        document.getElementById("result").value =z ; 
+
+     }
+
+     function mul()
+ 	{
+ 		var x=document.getElementById("A").value;
+ 		var y=document.getElementById("B").value;
+        var z =parseInt(x) *parseInt(y);
+        document.getElementById("result").value =z ; 
+
+     }
+
+     function div()
+ 	{
+ 		var x=document.getElementById("A").value;
+ 		var y=document.getElementById("B").value;
+        var z =parseInt(x) /parseInt(y);
+        document.getElementById("result").value =z ; 
+
+     }
+ </script>
+ 
+ 
+ 
+	<!-- <br>
+	<div onClick="display()"> Click </div>
+	
+<script>
+  function display()
+  {
+  	alert("hello this is onclick event");
+  }
+ </script> --> 
+ </body>
+ </html>

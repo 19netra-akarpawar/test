@@ -1,0 +1,30 @@
+<!-- adding dynamic data to array -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <script>
+        var ary = [];
+        function addElements(){
+            ary.push(parseInt(document.getElementById('data').value));
+            console.log(document.getElementById('data').value);
+        }
+        function sumElements(){
+            var sum = 0;
+            for(var i =0; i<ary.length;i++){
+                sum += ary[i];
+            }
+            document.getElementById('x').innerHTML = " The Total sum is : "  + sum;
+        }
+    </script>
+</head>
+<body>
+    <input type = "text" id = "data"/>
+    <input type="button" value= " Push " onclick="addElements()" >
+    <input type="button" value= " Sum " onclick="sumElements()" >
+    <hr>
+    <p id="x">The Total sum is : </p>
+</body>
+</html>

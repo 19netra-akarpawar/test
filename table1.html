@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>  create a table </title>
+</head>
+<body>
+<div id="mytable" ></div>
+<script>
+
+ var element=["apple","banana","kiwi","grapes"];
+  var mytable= document.getElementById('mytable');
+  
+  var table = document.createElement('table');
+  var tr=document.createElement('tr');
+  
+  table.style.border="1px solid black";
+  table.style.width="80%";
+  
+  for(var i=0;i<element.length;i++)
+   {
+      var td=document.createElement('td');
+	  td.innerHTML =element[i];
+	  tr.appendChild(td);
+	  table.appendChild(tr);
+	  mytable.appendChild(table);
+	}
+</script>
+</body>
+</html>
+ 
+ 
+ 
+ 

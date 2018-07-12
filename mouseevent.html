@@ -1,0 +1,35 @@
+<html>
+<head>
+<title> Mouse events </title>
+<style>
+ #demo
+   {
+     background-color:yellow;
+	 font-size:20px;
+  }
+  </style>
+
+<script>
+var d = document.getElementById("demo");
+var d = document.getElementById('demo');
+ function my_fun()
+ {
+     /*d.style.color = "#ff0000";
+	 d.Style.fontSize="30px";*/
+	 d.innerHTML='this is mouse over event';
+  }
+ 
+ function fun2()
+ {
+    /* d.Style.backgroundColor="green";
+	 d.Style.fontSize="40px";*/
+	 d.innerHTML="this is mouse out event";
+  }
+   
+</script>
+</head>
+
+<body>
+  <div id="demo" onmouseOver="my_fun()" onmouseOut="fun2()"> this is mouse event </div>
+</body>
+</html>

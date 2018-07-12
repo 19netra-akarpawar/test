@@ -1,0 +1,52 @@
+<!-- Array data sorting example-->
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+	<button type="button" value= " Show Names " onclick="showData();">Show Names of person</button><hr>
+	<div id="rd"></div>
+	
+	<script>
+		function showData()
+		{
+      		//var sortarr=[];
+			var name = Array(5);
+			name['a'] = "sandeep";
+			name['b'] = "dhanashree";
+			name['c'] = "pranati";
+			name['d'] = "reshma";
+			name['f'] = "sagar";
+
+			var temp = '';
+			for(var x in name){
+				for(var y in name){
+					if(name[x].localeCompare(name[y])>0){
+						temp = name[x];
+						name[x] = name[y];
+						name[y] = temp;
+					}
+				}
+			}
+			for(var x in name)
+				document.write(name[x]+'<br>');
+		}
+      // A to Z
+      //name.sort();
+
+      // Z to A
+      /*name.sort(function (b, a) {
+            return a.toLowerCase().localeCompare(b.toLowerCase());
+      });*/
+	/*var rd = document.getElementById("rd");
+	for(var i = 0 ; i< name.length ; i++)
+      {
+				var newDiv = document.createElement("div");
+				newDiv.innerHTML = "Array name is : <b>" + name[i].toUpperCase() + "</b>";
+				rd.appendChild(newDiv);
+			}
+		}*/
+
+	</script>
+</body>
+</html>

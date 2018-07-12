@@ -1,0 +1,32 @@
+<!-- 
+5. Write a JavaScript program to convert temperatures 
+to and from Celsius, Fahrenheit.
+[ Formula : c/5 = (f-32)/9 [ where c = temperature in 
+Celsius and f = temperature in Fahrenheit ]
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	Enter Temprature: <input type="text" name="" id="x"><br>
+	<button type="button" onclick="cal()">Celsius (C or o)</button>
+	<button type="button" onclick="fan()">Fahrenheit (F)</button><br>
+
+	Result is : <span id="xx"></span> 
+	<script >
+		function cal() {
+			var f = parseInt(document.getElementById('x').value);
+			var temp = (f - 32) * 5/9;
+			document.getElementById("xx").innerHTML = temp;
+		}
+		function fan() {
+			var c = parseInt(document.getElementById('x').value);
+			var temp = (c * 9/5) + 32
+			document.getElementById("xx").innerHTML = temp;
+		}
+	</script>
+</body>
+</html>

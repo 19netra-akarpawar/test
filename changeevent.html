@@ -1,0 +1,21 @@
+<html>
+<head>
+<title> Change event </title>
+<script>
+function mychange()
+{
+  var x = document.getElementById ("demo");
+   x.value = x.value.toUpperCase();
+   
+   alert("change the event sucessfully shows in uppercase");
+}
+
+
+</script>
+
+
+<body>
+  <p> on change event </p>
+  <input type="text" id="demo" onchange="mychange()">
+</body>
+</html>

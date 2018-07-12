@@ -1,0 +1,19 @@
+<!-- mouseover event example on text field -->
+<html>
+    <body>
+            <form>
+                <input type='text' value='we are learning javascripts' onmouseover='alert(this.value);'/>
+                <input type='text' id="test" value='with javascripts'/>
+            </form>
+    </body>
+</html>
+<script>
+    document.getElementById('test').addEventListener("mouseover", myfun);
+
+    function myfun()
+    {
+        var tval=document.getElementById('test').value;
+        alert(tval);
+    }
+
+</script>

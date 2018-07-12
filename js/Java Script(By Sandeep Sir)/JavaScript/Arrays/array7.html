@@ -1,0 +1,84 @@
+<!-- Array Functions
+			1. push
+			2. pop
+			3. unshift
+			4. shift
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <style>
+        .d{
+           padding:10px;
+           margin:10px;
+           background-color:green;
+           font-size:18px;
+           border:none;
+        }
+        .tt{
+           padding:12px;
+           margin:10px;
+        }
+    </style>
+	<script>
+        var ary = ["Dhanashree", "Sandeep", "Neelam", "Pranati", "Mohit"];
+        function DisplayAryResults(){
+            var n = ary.length;
+
+            document.getElementById('AryCount').innerHTML = "No. of item is : <b>" + n + "</b>";
+            var AryItem = document.getElementById('AryItem');
+
+            // removing sub child div
+            while(AryItem.hasChildNodes()){
+                AryItem.removeChild(AryItem.lastChild);
+            }
+
+            // printing array data
+            for(i in ary)
+						{
+                var newDiv = document.createElement("div");
+    						newDiv.innerHTML = "Index <b>" + i + "</b>, Item <b>" + (i+1) + "</b> of <b> " + n + "</b> is <b>" + ary[i] + "</b>";
+								AryItem.appendChild(newDiv);
+            }
+        }
+
+        function arrayPush(){
+            var v = document.getElementById('data').value;
+            ary.push(v);
+            DisplayAryResults();
+        }
+
+        function arrayPop(){
+            ary.pop();
+            DisplayAryResults();
+        }
+
+        function arrayUnshift(){
+            var v = document.getElementById('data').value;
+            ary.unshift(v);
+            DisplayAryResults();
+        }
+
+        function arrayShift(){
+            ary.shift();
+            DisplayAryResults();
+        }
+        window.onload = DisplayAryResults;
+	</script>
+</head>
+<body>
+    <b>Enter Your Name :</b>
+		<input type = "text" id = "data" class="tt"/>
+
+    <input type="button" value= " Push " onclick="arrayPush();" class="d" id="btnAryAdd">
+    <input type="button" value= " Pop " onclick="arrayPop();" class="d" id="btnAryPop">
+    <input type="button" value= " Unshift " onclick="arrayUnshift();" class="d" id="btnAryUnshift">
+    <input type="button" value= " Shift " onclick="arrayShift();" class="d" id="btnAryShift">
+		<div style="border:2px solid red;"></div>
+    <div id="AryCount"></div><br>
+    <div id="AryItem"></div>
+
+</body>
+</html>

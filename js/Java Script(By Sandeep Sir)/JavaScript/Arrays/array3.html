@@ -1,0 +1,31 @@
+<!-- array with name example -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+	<button type="button" value= " Show Names " onclick="showData();">Show Names of person</button><hr>
+	<div id="r"></div>
+
+    <script>
+		function showData()
+		{
+			var name = Array(5);
+			name[0] = "sandeep";
+			name[1] = "dhanashree";
+			name[2] = "pranati";
+			name[3] = "reshma";
+			name[4] = "sagar";
+
+			var r = document.getElementById("r");
+        for(var i = 0 ; i< name.length ; i++){
+				var newDiv = document.createElement("div");
+				newDiv.innerHTML = "Array name is : <b>" + name[i].toUpperCase() + "</b>";
+				r.appendChild(newDiv);
+			}
+		}
+	</script>
+</body>
+</html>

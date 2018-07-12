@@ -1,0 +1,36 @@
+<!-- prime number -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	Enter number <input type="text" id="b"><br>
+	<button type="button" onclick="prime();">Get Prime Info</button>
+	<br>Number is : <span id="x"></span>
+	<script>
+		var x = document.getElementById('x');
+		function prime()
+		{
+			var temp = 0;
+			var b = parseInt(document.getElementById('b').value);
+			for(var i = 2 ; i < b ; i++ ){
+				if(b%i == 0){
+					temp = 1;
+					break;
+				}
+			}
+			if(temp == 1){
+				x.innerHTML = "Not prime number";
+				x.style.color = "red";
+			}
+			else{
+				x.innerHTML = "prime number";
+				x.style.color = "green";
+			}
+
+		}
+		
+	</script>
+</body>
+</html>

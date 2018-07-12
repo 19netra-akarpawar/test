@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		try{
+			var v1 = (function name(){
+				var x = 10;
+				return "Sandeep";		
+			})();
+			document.write(x);
+
+			
+			var v2 = (function(){
+				return " Pal";	
+			})();
+			document.write(v1 + v2);
+			
+		}catch(err){
+			document.write(x);
+			document.write(err.message);
+		}
+		document.write("<br>hello");
+	</script>
+</body>
+</html>

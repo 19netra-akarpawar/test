@@ -1,0 +1,66 @@
+<!-- Collection Array-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	  <title></title>
+		<meta charset="utf-8">
+    <style>
+        button{
+            padding:10px;
+            margin:10px;
+            background-color:green;
+            font-size:18px;
+            border:none;
+        }
+        #rd{
+            border:2px solid red;
+            width:300px;
+            font-size:18px;
+        }
+    </style>
+</head>
+<body>
+	<button type="button" value= " Show Names " onclick="showData();"><b>Show Collection Array Data</b></button><hr>
+	<div id="rd"></div>
+
+    <script>
+			var Product1 = [];
+			Product1["Product ID"] = 101;
+			Product1["Product Name"] = "MacBook Air";
+			Product1["Product Price"] = 125000.00;
+			Product1["Product Type"] = "Laptop";
+
+      var Product2 = [];
+			Product2["Product ID"] = 102;
+			Product2["Product Name"] = "iPhone 8";
+			Product2["Product Price"] = 85000.00;
+			Product2["Product Type"] = "Mobile";
+
+      var Product3 = [];
+			Product3["Product ID"] = 103;
+			Product3["Product Name"] = "Samsung";
+			Product3["Product Price"] = 35000.00;
+			Product3["Product Type"] = "Watch";
+
+      var Product4 = [];
+			Product4["Product ID"] = 104;
+			Product4["Product Name"] = "Micromax";
+			Product4["Product Price"] = 98000.00;
+			Product4["Product Type"] = "LED";
+
+      var Products = [Product1, Product2, Product3, Product4];
+
+		function showData() {
+          for(i in Products) {
+            var Product = Products[i];
+            for(t in Product){
+                var newDiv = document.createElement("div");
+                newDiv.innerHTML = t+ ": <b>" + Product[t] + "</b>";
+                document.getElementById("rd").appendChild(newDiv);
+            }
+        	}
+		}
+	</script>
+</body>
+</html>

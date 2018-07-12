@@ -1,0 +1,44 @@
+<!DOCTYPE html>  
+<html><head>  
+
+</head>  
+<body onload="document.registration.address.focus();">  
+	<h1>Registration Form</h1>  
+	<form name='registration' onSubmit="return formValidation();"> 
+	
+	<label for="country">Country:</label>
+	<select name="country">
+	<option selected="" value="Default">(Please select a country)</option>  
+	<option value="Australia">Australia</option>  
+	<option value="Canada">Canada</option>  
+	<option value="India">India</option>  
+	<option value="Russia">Russia</option>  
+	<option value="USA">USA</option>  
+	</select> <br><br>
+
+	<input type="submit" name="submit" value="Submit" />
+	</form>
+	<script>
+	function formValidation()  
+	{  
+		var ucountry = document.registration.country;
+		return countryselect(ucountry);
+	}
+	function countryselect(ucountry)  
+	{  
+		if(ucountry.value == "Default")  
+		{  
+			alert('Select your country from the list');  
+			ucountry.focus();  
+			return false;  
+		}  
+		else  
+		{  
+			alert("Selected : " + ucountry.value)
+			return true;  
+		}  
+	}    
+
+	</script> 
+</body>  
+</html>  

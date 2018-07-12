@@ -1,0 +1,140 @@
+<!DOCTYPE html>  
+<html><head>  
+
+</head>  
+<body onload="document.registration.userid.focus();">  
+	<h1>Registration Form</h1>
+	<form name = "registration" onSubmit="return formValidation();"> 
+		<label for="userid">User id:</label>
+		<input type="text" id="userid" size="12" style="width: 20%" onkeyup="userid_validation()" >
+		<span id="x"></span><br><br>
+
+		<label for="username">Name:</label>
+		<input type="text" id="username" size="12" style="width: 20%" onkeyup="username_validation();">
+		<span id="y"></span><br><br>
+		
+		<label for="username">Mobile Number:</label>
+		<input type="text" id="usermobile" size="12" style="width: 20%" onkeypress="usermobile_validation();">
+		<span id="z"></span><br><br>
+		
+		<input type="submit" name="submit" value="Submit" />
+	</form>
+	
+
+	<script>
+		var name = false;
+		var id = false;
+		var mobile = false;
+
+
+	function userid_validation()  
+	{  
+		var uid = document.getElementById('userid');
+		var uid_len = uid.value.length;  
+		if(uid_len == 0){
+			document.getElementById('x').innerHTML = "User Id should not be empty ";
+			document.getElementById('x').style.color = 'red';  
+			uid.focus();  
+			id = false;
+		}
+		else{
+			//alert("User ID is : "+ uid.value);
+			document.getElementById('x').innerHTML = "";
+			id = true;
+		}  
+	} 
+	function username_validation()  
+	{  
+		var uname = document.getElementById('username');
+		var uname = uname.value; 
+		// regular expression
+		var letters = /^[A-Za-z]+$/;  
+		if(uname.match(letters))  
+		{
+			document.getElementById('y').innerHTML ="";
+			name = true;
+		}
+		else{
+			document.getElementById('y').innerHTML = "Please enter valid user name";
+			document.getElementById('y').style.color = 'red';
+		}  
+	} 
+	function usermobile_validation()  
+	{  
+		var umobile = document.getElementById('usermobile');
+		var umobile = umobile.value; 
+		// regular expression
+		var letters = /^[0-9]+$/;  
+		if(umobile.match(letters) && umobile.length == 9)  
+		{
+			document.getElementById('z').innerHTML = "";
+			mobile = true;
+		}
+		else{
+			document.getElementById('z').innerHTML = "Please enter valid mobile number";
+			document.getElementById('z').style.color = 'red';
+		}  
+	}
+	
+	function formValidation()  
+	{  
+		return id && name && mobile;
+	}
+	/*
+	function userid_validation(uid,min,max)  
+	{  
+		var uid_len = uid.value.length;  
+		if(uid_len == 0){
+			document.getElementById('x').innerHTML = "User Id should not be empty ";
+			document.getElementById('x').style.color = 'red';  
+			uid.focus();  
+			return false;
+		}
+		else if (uid_len >= max || uid_len < min)  
+		{  
+			//alert("User Id should not be empty / length be between "+min+" to "+max);
+			document.getElementById('x').innerHTML = "User Id should have length between "+min+" to "+max;
+			document.getElementById('x').style.color = 'red';  
+			uid.focus();  
+			return false;
+		}
+		else{
+			//alert("User ID is : "+ uid.value);
+			document.getElementById('x').innerHTML = "";
+			return true;
+		}  
+	} 
+	function username_validation(uname)  
+	{  
+		var uname = uname.value; 
+		// regular expression
+		var letters = /^[A-Za-z]+$/;  
+		if(uname.match(letters))  
+		{
+			document.getElementById('y').innerHTML ="";
+			return true;
+		}
+		else{
+			document.getElementById('y').innerHTML = "Please enter valid user name";
+			document.getElementById('y').style.color = 'red';
+			return false;
+		}  
+	} 
+	function usermobile_validation(umobile)  
+	{  
+		var umobile = umobile.value; 
+		// regular expression
+		var letters = /^[0-9]+$/;  
+		if(umobile.match(letters) && umobile.length == 10)  
+		{
+			return true;
+		}
+		else{
+			document.getElementById('z').innerHTML = "Please enter valid mobile number";
+			document.getElementById('z').style.color = 'red';
+			return false;
+		}  
+	}  */
+	</script> 
+</body> 
+</html>

@@ -1,0 +1,49 @@
+<html>
+<head>
+</head>
+<body>
+<table style="width:500px" id="T">
+  <tr>
+  <td><button type="button" onClick="showflight()">Flight Name </td>
+  <td><button type="button" onClick="showft()"> Timing </td>
+  <td><button type="button" onClick="showght()">Deprature timing </td>
+  <td><button type="button" onClick="showht()">Arrival Timing</td>
+  <td><button type="button" onClick="showflht()">Fare </td>
+  </tr>
+ </table>
+ <script type="text/javascript">
+ 	var flight = ["GoIndia","AirIndia","Spiceget","Vistara","Indigo"];
+			console.log(flight);
+
+	var timing = [12.00,1.30,2.30,5.20,6.30];
+	console.log(timing);
+	var Departure = [12.15,2.45,3.00,5.45,7.00];
+			console.log(Departure);
+	var Arrival = [2.00,4.00,8.00,8.15,11.00];
+	console.log(Arrival);
+     var fare = [4000,6000,7000,8000,5000];
+			console.log(fare);
+
+
+	var details = ["flight","timing","Departure","Arrival","Fare"];
+	console.log(details);
+
+     const table=document.getElementById("T");
+	function showflight()
+	{
+		 for( index  in details)
+		 var plane = details[index];
+		  var plane1 =document.createElement("table");
+		   for(t in plane)
+		   	  {
+		   	  	var newDiv = document.createElement("td");
+                newDiv.innerHTML = t+ ": <b>" + Pr[t] + "</b>";
+                document.getElementById("rd").appendChild(newDiv);
+		   	  }
+	}
+ 
+ 
+ 	
+ </script>
+ </body>
+ </html>
